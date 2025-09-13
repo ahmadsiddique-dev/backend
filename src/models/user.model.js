@@ -50,4 +50,11 @@ userSchema.pre("save", async function (next) {
 userSchema.methods.isPasswordCorrect = async function () {
     bcrypt.compare(password, this.password)
 }
+
+userSchema.methods.userRefreshToken = async function () {
+    jwt.sign({
+        _id : this._id,
+        username : this.username
+    })
+}
 export const User = mongoose.model("User", userSchema)
