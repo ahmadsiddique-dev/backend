@@ -7,9 +7,6 @@ import { app } from "./app.js";
 
 connectDB()
 .then(() => {
-  // app.get("/ahmad", (req, res) => {
-  //   res.send("Ahmad is a good boy")
-  // })
   app.listen(process.env.PORT || 8000, () => {
     console.log(`Server is live on ${process.env.PORT || 8000}`)
   })
