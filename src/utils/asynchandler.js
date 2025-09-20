@@ -5,7 +5,7 @@ const asynchandler = (reqhandler) => {
     }
 }
 
-export {asynchandler}
+// export {asynchandler}
 // const asynchandler = (fn) => async (req, res, next) => {
 //     try {
 //         await fn(req, res, next)
@@ -16,6 +16,7 @@ export {asynchandler}
 //         }))
 //     }
 // }
+
 
 // const asynchandler = (fn) => async (req, res, next) => {
 //     try {
